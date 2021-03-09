@@ -1,0 +1,16 @@
+version: 0.2
+ 
+phases:
+  install:
+    runtime-versions:
+      java: corretto11
+  build:
+    commands:
+      - echo Build started on `date`
+      - mvn clean install 
+artifacts:
+  files:
+    - target/springboot-docker-assignment-without-database-1.0-SNAPSHOT.jar
+    - scripts/*.sh
+    - appspec.yml
+  discard-paths: yes
