@@ -20,3 +20,9 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
+- task: Docker@2
+  inputs:
+    containerRegistry: 'dockerregistryserviceconnection'
+    repository: 'springboot-docker-assignment-without-database'
+    command: 'buildAndPush'
+    Dockerfile: '**/Dockerfile'
