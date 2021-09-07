@@ -23,6 +23,6 @@ steps:
 - task: Docker@2
   inputs:
     containerRegistry: 'dockerregistryserviceconnection'
-    repository: 'springboot-docker-assignment-without-database'
+    repository: 'cloudtechmasters/springboot-docker-assignment-without-database'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
